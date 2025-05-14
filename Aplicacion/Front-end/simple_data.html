@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos_simples</title>
+</head>
+<body>
+    <h1>Tipos de Datos Simples y Compuestos</h1>
+    <p>Bienvenido a esta primera seccion del curso JavaFacilito!.Este sera el inicio  de este hermoso camino para convertirte en un gran java developer. Aqui conoceras los conceptos fundamentales, los cuales formaran bases solidas que te ayudaran a manipular los datos de los programas que desarrolles en un futuro.<br>
+    Esperamos que te diviertas, ¡bienvenido! </p>
+
+    <h2>¿Que es un dato?</h2>
+    <p>Antes de comenzar, es muy importante conococer que son los datos en la programación, en pocas palabras estos datos son informacion, esta informacion la puedes guardar en algo llamado "variables", estas variables te serviran para poder guardar y manejar dicha informacion. Entonces para poder entender de manera sencilla que es una variable lo explicaremos de la siguiente manera.<br><br>
+    Imagina que tienes una caja con una etiqueta, esta etiqueta describe lo que hay en dicha caja, y dentro de cada caja puedes meter algo, en el caso de la programacion, ese "algo", son cosas como: numeros, palabras, valores de verdadero o falso, entre otras.
+    Eso que has metido y que hay dentro de la caja, es el dato, y el nombre de la caja o la etiqueta es la variable. Recuerda, en programacion un dato es cualquier informacion que pueda ser procesada por una computadora.
+    <h4> Ejemplos</h4>
+    <ul>
+        <li>edad = 27</li>
+        <li>nombre = john doe</li>
+        <li>mayor_edad = true</li>
+        <li>lista_mercado = ["pan,"leche,"arroz"]</li>
+    </ul>
+
+    Dentro de la programacion existen tipos de datos. Estos tipos indican que clase de información se esta mandejando. Asi el programa sabra como tratar el dato.
+    </p>
+    <h2>Datos Simples</h2>
+    <p>
+    Los datos simples son los tipos de datos mas basicos. En un contexto mas cotidiano son el equivalente a las piesas mas pequeñas de un LEGO, piesas las cuales se usan para construir cosas mas grandes
+    <h4> Características:</h4>
+    <ul>
+        <li>Solo almacenana un valor</li>
+        <li>Son rápidos y ocupan poca memoria</li>
+        <li>No tienen funcionalidades adicionales (métodos)</li>
+        <li>son usados para hacer operaciones sipmles como sumar, comparar, contar, etc.</li>
+    </ul>
+    <p>Ahora que ya sabes que son los datos simples, podremos mencionar los que hay en Java</p>
+
+    <h2>Datos simples en Java</h2>
+
+    <p>Comencemos por los numeros, los datos que puedes usar para manejar nuemeros son los siguietenes: </p>
+
+    <ol>
+        <li><b>byte:</b></li>
+        <ul>
+            <li>Tamaño: 8 bits</li>
+            <li>Rango: -128 a 127</li>
+            <li>Uso: Ideal para ahorrar memoria cuando sabes que vas a trabajar con valores pequeños</li>
+        </ul>
+        <li><b>short:</b></li>
+        <ul>
+            <li>Tamaño: 16 bits</li>
+            <li>Rango: -32.768 a 32.767</li>
+            <li>Uso: Ideal para ahorrar calculos de bajo consumo, donde no se necesita mucha precision</li>
+        </ul>
+        <li><b>int:</b></li>
+        <ul>
+            <li>Tamaño: 32 bits</li>
+            <li>Rango: -2.147.483.648 a 2.147.483.647</li>
+            <li>Uso: Ideal para valores numericos relativamente grandes, operaciones basicos, o numeros por defecto como IDs</li>
+        </ul>
+        <li><b>long:</b></li>
+        <ul>
+            <li>Tamaño: 64 bits</li>
+            <li>Rango: -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807/li>
+            <li>Uso: Ideal para numeros enormes</li>
+        </ul>
+        <li><b>float:</b></li>
+        <ul>
+            <li>Tamaño: 32 bits</li>
+            <li>Precision: 6-7 digitos decimales</li>
+            <li>Uso: Decimales rápidos con menor precisión</li>
+        </ul>
+        <li><b>double:</b></li>
+        <ul>
+            <li>Tamaño: 64 bits</li>
+            <li>Precision: 15 digitos decimales</li>
+            <li>Uso: Decimales de alta precision como calculos financieros, cientificos o estadistica</li>
+        </ul>
+    
+
+    <p>Acontinuacion podras ver una tabla con todos los valores de cada tipo de numero</p>
+
+
+
+    <h1>INSERTE IMAGEN AQUI</h1>
+
+    <p> Ademas de los numeros, tambien existen tipos para representar valores booleanos (valores de verdadero o falso)</p>
+
+    
+        <li><b>char:</b></li>
+        <ul>
+            <li>Tamaño: 16 bits</li>
+            <li>¿Que es?: simplemente un caracter, un simbolo</li>
+            <li>Sirve: Para manejar letras individuales, como iniciales o simbolos</li>
+        </ul>
+        <li><b>boolean:</b></li>
+        <ul>
+            <li>Tamaño: 1 bit</li>
+            <li>¿Que es?: La representacion de un valor logico (true o false)</li>
+            <li>Sirve: Para tomar decisiones, condiciones, verificaciones, etc.</li>
+        </ul>
+    </ol>
+
+    
+    <h3> Implementacion en Java</h3>
+
+    <h1> INSERTE IMAGEN AQUI</h1>
+
+    <h2>Datos compuestos</h2>
+    <p>
+    Los datos compuestos, son estructuras que agrupan varios valores, pueden incluir tipos primitivos y objetos. No estan definidos como "Primitivas" en Java, pero se les llama "compuestas" porque contienen varios Datos. En palabras del ejemplo anterior, los datos compuestos son como las cajas mas grandes, las cuales pueden guardar varios datos simples juntos, son como el LEGO grande hecho para varias piezas.
+    </p>
+
+    <h4> Características:</h4>
+    <ul>
+        <li>Agrupan multiples valores (a veces de distintos tipos)</li>
+        <li>Son objetos (tienen metodos y propiedades)</li>
+        <li>No tienen funcionalidades adicionales (métodos)</li>
+    </ul>
+
+    <h2>Datos compuestos en Java</h2>
+
+    <ol>
+        <li><b>String:</b></li>
+        <ul>
+            <li>¿Que es?: Una secuencia de caracteres</li>
+            <li>Sirve: Para guardar nombres, mensajes, frases, textos largos o pequeños</li>
+            <li>Algunos metodos: .length(), .toUpperCase(), .substring()</li>
+        </ul>
+        <li><b>Array (arreglo):</b></li>
+        <ul>
+            <li>¿Que es?: Una coleccion ordenada de valores del mismo tipo, con tamaño fijo.</li>
+            <li>Sirve: Para guardar listas de elementos, como notas, edades, nombres</li>
+            <li>Su tamaño no cambia una vez creado</li>
+            <li>Tiene indice (posicion)</li>
+        </ul>
+        <li><b>ArrayList(lista dinamica):</b></li>
+        <ul>
+            <li>¿Que es?: Una lista similar al array, pero mas flexible ya que puedes agregar o quitar elementos.</li>
+            <li>Sirve: Cuando no sabes cuantos elementos vas a tener</li>
+            <li>Metodos utiles: .add(), .remove(), .get(), .size()</li>
+        </ul>
+        <li><b>HashMap:</b></li>
+        <ul>
+            <li>¿Que es?: Estructura que guarda pares clave-valor</li>
+            <li>Sirve: guardar cosas con etiquetas como telefono de contactos o configuraciones.</li>
+            <li>puedes acceder por clave: edades.get(nombre) -> contenido  </li>
+        </ul>
+        <li><b>Object:</b></li>
+        <ul>
+            <li>¿Que es?: La superclase de la que heredan todas las demas clases en Java</li>
+            <li>Sirve:Si no sabes que tipo de dato vas a recibir puedes usar Object </li>
+            
+        </ul>
+        <li><b>Class:</b></li>
+        <ul>
+            <li>¿Que es?:Un estructura que tu mismo defines para representar un objeto del mundo real</li>
+            <li>Sirve: Cuando necesitas agrupar diferentes datos ( nombre + edad + direccion)</li>
+        </ul>
+    </ol>
+
+
+
+
+
+
+
+</body>
+</html>
