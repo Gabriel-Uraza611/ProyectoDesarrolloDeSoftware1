@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Java Facilito - Arreglos y Matrices</title>
+    <link rel="stylesheet" href="css/index_styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
-    
+
+    <div class="content" style="overflow-y: auto;">
+        <section class="documentation">
+            <div class="section-header" style="background: linear-gradient(to right, #00c6ff, #0072ff); padding: 1rem; color: white;">
+                <h2>Arreglos y Matrices</h2>
+            </div>
+            <div class="section-body" style="padding: 1rem;">
+                <p>
+                    En Java, los <strong>arreglos (Arrays)</strong> son estructuras de datos que almacenan múltiples valores del mismo tipo en una sola variable. 
+                    Cada elemento en un arreglo tiene una posición o <em>índice</em>, que comienza en 0.
+                </p>
+
+                <h3>Declaración y uso de arreglos</h3>
+                <p>
+                    Para declarar un arreglo se especifica el tipo de elementos que este va a almacenar: int, string, etc.
+                    Tambien se debe especificar la cantidad maxima que debe almacenar.
+                </p>
+                <p>
+                    Si queremos agregar un elemento al arreglo debemos ubicarnos en una posición del mismo y asignarle un valor adecuado
+                    segun el tipo de arreglo que manejamos, para ello utlizamos las llaves [] y dentro el valor del indice o posición
+                    del arreglo al que queremos asignarle un valor.
+                </p>
+                <pre><code>
+                    int[] numeros = new int[5];
+                    numeros[0] = 10;
+                    numeros[1] = 20;
+                </code></pre>
+                <p>También se pueden declarar e inicializar al mismo tiempo, con llaves y los valores separados por comas:</p>
+                <pre><code>
+                    String[] nombres = {"Ana", "Luis", "Carlos"};
+                </code></pre>
+
+
+                <p>
+                    Existe algunos metodos que se pueden aplicar directamente sobre el arreglo.
+                    Para implementarlos remplazar la palabra array, array1, array2 por los nombres de los arreglos que manejes
+                </p>
+                <ul>
+                    <li><code><span style="color: #a200ff">array</span>.length</code>: Propiedad que devuelve la longitud (número de elementos) del arreglo.</li>
+                    <li><code>Arrays.sort(<span style="color: #a200ff">array</span>)</code>: Ordena los elementos del arreglo de menor a mayor.</li>
+                    <li><code>Arrays.toString(<span style="color: #a200ff">array</span>)</code>: Devuelve una representación en forma de cadena del arreglo.</li>
+                    <li><code>Arrays.copyOf(<span style="color: #a200ff">array</span>, #Nuevo tamaño)</code>: Crea una copia del arreglo con una nueva longitud.</li>
+                    <li><code>Arrays.equals(<span style="color: #a200ff">array1</span>, <span style="color: #a200ff">array2</span>)</code>: Compara si dos arreglos son iguales elemento por elemento.</li>
+                    <li><code>Arrays.fill(<span style="color: #a200ff">array</span>, #valor)</code>: Asigna un valor a todos los elementos del arreglo.</li>
+                </ul>
+
+                <h3>Recorrido de un arreglo</h3>
+                <p>
+                    Para recorrer un arreglo debemos llamar cada valor del mismo con las llaves y el indice.
+                    La forma más comoda de recorrer el arreglo es con un bucle for:
+                </p>
+                <pre><code>
+                    int[] numeros = new int[5];
+                    for (int i = 0; i < numeros.length; i++) {
+                        System.out.println(numeros[i]);
+                    }
+                </code></pre>
+
+                <h3>Arreglos multidimensionales (Matrices)</h3>
+                <p>
+                    Las <strong>matrices</strong> son arreglos de dos o más dimensiones. En Java, una matriz de dos dimensiones puede verse como una tabla.
+                    Para definir las matrices, es igual a la Sintaxis de los arreglos pero con 2 o mas campos de valores.
+                </p>
+                <pre><code>
+                    int[][] matriz = new int[2][3];
+                    matriz[0][0] = 1;
+                    matriz[0][1] = 2;
+                    matriz[1][0] = 3;
+                </code></pre>
+
+                <p>
+                    Las matrices se caracterizan por tener 2 dimensiones (i, j), se pueden comparar a una tabla con filas y columnas.
+                    Para poder acceder a un elemento tenemos que referirnos a la posición i,j para obtenerlo.
+                </p>
+
+                <p>Recorrer una matriz:</p>
+                <pre><code>
+                    for (int i = 0; i < matriz.length; i++) {
+                        for (int j = 0; j < matriz[i].length; j++) {
+                            System.out.println("Elemento en [" + i + "][" + j + "]: " + matriz[i][j]);
+                        }
+                    }
+                </code></pre>
+
+                <p>
+                    Un ejemplo para el uso de matrices es cuando queremos guardar varios datos de un mismo objeto, en este caso personas.
+                    Definir una matriz donde las filas sea una persona distinta y las columnas sea la información personal de esa persona.
+                </p>
+                <pre><code>
+                    String[][] personas = {
+                        {"Juan", "25", "Bogotá"},
+                        {"Ana", "30", "Medellín"},
+                        {"Luis", "22", "Cali"}
+                    };
+                </code></pre>
+
+            </div>
+        </section>
+
+        <section class="exercises">
+            <div class="section-header" style="background: linear-gradient(to right, #00c6ff, #a200ff); padding: 1rem; color: white;">
+                <h2>Ejercicios: Arreglos y Matrices</h2>
+                <p>Practica con estos ejercicios sobre arreglos y matrices en Java.</p>
+            </div>
+            <div class="section-body" style="padding: 1rem;">
+                <div class="exercise">
+                    <h3>Ejercicio 1</h3>
+                    <p>Crear un arreglo de enteros e imprimir sus elementos.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <div class="exercise">
+                    <h3>Ejercicio 2</h3>
+                    <p>Llenar un arreglo con números del 1 al 10 y mostrarlos.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <div class="exercise">
+                    <h3>Ejercicio 3</h3>
+                    <p>Calcular el promedio de los valores en un arreglo.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <div class="exercise">
+                    <h3>Ejercicio 4</h3>
+                    <p>Crear una matriz de 3x3 y llenarla con valores consecutivos.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <div class="exercise">
+                    <h3>Ejercicio 5</h3>
+                    <p>Sumar los valores de una matriz de enteros.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <div class="exercise">
+                    <h3>Ejercicio 6</h3>
+                    <p>Encontrar el valor máximo en un arreglo.</p>
+                    <button>Intentar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/index_script.js"></script>
 </body>
 </html>
