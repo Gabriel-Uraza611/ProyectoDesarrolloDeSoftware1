@@ -6,6 +6,88 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="content" style="overflow-y: auto;">
+        <section class="documentation">
+            <div class="section-header" style="background: linear-gradient(to right, #00c6ff, #0072ff); padding: 1rem; color: white;">
+                <h2>Funciones</h2>
+            </div>
+            <div class="section-body" style="padding: 1rem;">
+                <p>
+                    En Java, una función (también llamada método) es un bloque de código reutilizable que realiza una tarea específica. Su sintaxis básica es:
+                </p>    
+                <pre><code>
+                    public static tipoDeRetorno nombreFuncion(parámetros) {
+                        // Cuerpo de la función
+                    return valor;
+                    }
+                </code></pre>
+                <p> Explicación </p> 
+                <ul>
+                    <li>tipoDeRetorno: El tipo de dato que devuelve la función (como int, String, etc.). Si no devuelve nada, se usa void.</li>
+                    <li>nombreFuncion: El nombre que identifica a la función.</li>
+                    <li>parámetros: Opcionales, son variables que la función puede recibir para trabajar con ellas.</li>
+                </ul>
+                <p>Ejemplo básico:</p>
+                <pre><code>
+                    public static int sumar(int a, int b) {
+                    return a + b;
+                    }
+                </code></pre>
+            </div>
+        </section>
+        <section class="exercises">
+            <div class="section-header" style="background: linear-gradient(to right, #00c6ff, #a200ff); padding: 1rem; color: white;">
+                <h2>Ejercicios: Funciones</h2>
+                <p>En esta sección encontrarás ejercicios prácticos para que domines los ciclos en Java.</p>
+            </div>
+            <div class="section-body" style="padding: 1rem;">
+                <h2>Nivel Fácil</h2>
+                <!-- Ejercicio 1 -->
+                <div class="exercise">
+                    <h3>Ejercicio 1: Suma de dos números</h3>
+                    <p>Crea una función que reciba dos números enteros y devuelva su suma.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <!-- Ejercicio 2 -->
+                <div class="exercise">
+                    <h3>Ejercicio 2: Número par o impar</h3>
+                    <p>Crea una función que reciba un número entero y devuelva true si es par o false si es impar.</p>
+                    <button>Intentar</button>
+                </div>
+                <h2>Nivel Intermedio</h2>
+                <!-- Ejercicio 3 -->
+                <div class="exercise">
+                    <h3>Ejercicio 3: Contar vocales</h3>
+                    <p>Enunciado: Crea una función que reciba una cadena de texto y cuente cuántas vocales contiene.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <!-- Ejercicio 4 -->
+                <div class="exercise">
+                    <h3>Ejercicio 4: Número primo</h3>
+                    <p>Crea una función que determine si un número entero es primo.</p>
+                    <button>Intentar</button>
+                </div>
+
+                <h2>Nivel Avanzado</h2>
+
+                <!-- Ejercicio 5 -->
+                <div class="exercise">
+                    <h3>Ejercicio 5: Invertir una cadena sin usar funciones de librería</h3>
+                    <p>Escribe una función que reciba una cadena y devuelva la misma cadena invertida sin usar funciones como reverse().</p>
+                    <button>Intentar</button>
+                </div>
+
+                <!-- Ejercicio 6 -->
+                <div class="exercise">
+                    <h3>Ejercicio 6: Fibonacci Recursivo</h3>
+                    <p>Crea una función recursiva que devuelva el n-ésimo número de Fibonacci.</p>
+                    <button>Intentar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/index_script.js"></script>
 </body>
 </html>
