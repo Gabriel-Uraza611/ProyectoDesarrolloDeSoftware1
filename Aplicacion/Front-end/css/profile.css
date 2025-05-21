@@ -94,3 +94,7 @@ body {
 .support-contact p {
     font-weight: 400;
 }
+
+.support-contact i {
+    margin-right: 10px;
+}

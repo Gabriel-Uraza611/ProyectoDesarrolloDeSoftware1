@@ -128,25 +128,29 @@ body.light-mode #toggle-theme {
 }
 
 .settings {
-    border-top: #444 1px solid;
     font-size: 24px;
     display: flex;
     align-items: center;
-    margin-top: auto;
-    padding: 20px;
+    margin: 20px 0;
+    padding: 10px;
 }
 
 .settings i {
     color: white;
-    margin-right: 50px;
+    margin: 0 20px;
 }
 
 .settings i:hover {
     color: #8c52ff;
 }
 
-.settings img {
-    width: 30px;
+.settings button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
 .content {
