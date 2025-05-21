@@ -1,20 +1,5 @@
-/* Estilos generales - Modo Oscuro Centrado */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    color: #e0e0e0;
-    background-color: #121212;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
 /* Contenedor principal centrado y compacto */
-.container {
-    width: 90%;
+.container-general {
     max-width: 800px;
     padding: 20px 0;
     margin: 0 auto;
