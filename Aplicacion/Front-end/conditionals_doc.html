@@ -3,86 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/modulos.css">
     <title>Condicionales</title>
-    <link rel="stylesheet" href="css/general.css">
 </head>
 <body>
-    <h1>Condicionales</h1>
-    <p>
-        ¡Bienvenido nuevamente. En esta seccion aprenderas a tomar decisiones dentro de tus programas usando estructuras llamadas condicionales! Estas son esenciales para que tu codigo reaccione de una forma especifica a diferentes situaciones, tu mismo decides como respondera el programa de acuerdo a un caso determinado.<br>
-        Sin embargo, antes de saber como hacer esto, es importante conocer que es un booleano o bool.
-    
-    </p>
-    <h2>¿Que es un Booleano?</h2>
-    <p>
-        Un booleano es un tipo de dato que solo puede tener dos valores posibles, estos valores son llamados valores de verdad, y estos son: true(verdadero) y false(falso). En la programacion, los booleanos son usados para tomar decisiones, ya que permiten evaluar condiciones y determinar el flujo de un programa. Por ejemplo, si tienes una variable llamada "esMayorDeEdad" que es de tipo booleano, puedes usarla para decidir si una persona puede entrar a un bar o no. Si "esMayorDeEdad" es true, entonces la persona puede entrar; si es false, no puede entrar. Es como un interruptor de luz que puede estar encendido o apagado. Los usamos para comprobar si algo es cierto o no.
-    </p>
-    <h2>Ejemplos cotidianos de valores booleanos</h2>
-    <ul>
-        <li>¿El cielo es azul?: true</li>
-        <li>¿La tierra es plana?: false</li>
-        <li>¿El agua es liquida?: true</li>
-        <li>¿Los gatos son reptiles?: false</li>
-    </ul>
-    <h3> ¿Que son los condicionales y para que sirven?</h3>
-    <p>
-        Los condicionales son instrucciones que permiten que el programa tome decisiones. Sirven para ejecutar una parte del codigo solo si se cumple una condicion.
-    </p>
+    <div class="module-content" >
+        <section class="documentation">
+            <div class="section-header">
+                <h1>Condicionales</h1>
+            </div>
+            <div class="section-body">
+                <p>
+                    ¡Bienvenido nuevamente. En esta seccion aprenderas a tomar decisiones dentro de tus programas
+                    usando estructuras llamadas condicionales! Estas son esenciales para que tu codigo reaccione de 
+                    una forma especifica a diferentes situaciones, tu mismo decides como respondera el programa de 
+                    acuerdo a un caso determinado. Sin embargo, antes de saber como hacer esto, es importante conocer
+                    que es un booleano o bool.
+                
+                </p>
+                <h2>¿Qué es un Booleano?</h2>
+                <p>
+                    Un booleano es un tipo de dato que solo puede tener dos valores posibles, 
+                    estos valores son llamados valores de verdad, y estos son: true(verdadero) y false(falso). 
+                    En la programacion, los booleanos son usados para tomar decisiones, ya que permiten evaluar 
+                    condiciones y determinar el flujo de un programa. Por ejemplo, si tienes una variable llamada 
+                    "esMayorDeEdad" que es de tipo booleano, puedes usarla para decidir si una persona puede entrar 
+                    a un bar o no. Si "esMayorDeEdad" es true, entonces la persona puede entrar; si es false, 
+                    no puede entrar. Es como un interruptor de luz que puede estar encendido o apagado. Los usamos 
+                    para comprobar si algo es cierto o no.
+                    <ul>
+                        <li><strong>Ejemplo:</strong></li>
+                        <li>¿El cielo es azul?: true</li>
+                        <li>¿La tierra es plana?: false</li>
+                        <li>¿El agua es liquida?: true</li>
+                        <li>¿Los gatos son reptiles?: false</li>
+                    </ul>  
+                </p>
+                <!--<ul>
+                    <li>¿El cielo es azul?: true</li>
+                    <li>¿La tierra es plana?: false</li>
+                    <li>¿El agua es liquida?: true</li>
+                    <li>¿Los gatos son reptiles?: false</li>
+                </ul>
+                
+                ¿El cielo es azul?: true <br>
+                    ¿La tierra es plana?: false <br>
+                    ¿El agua es liquida?: true <br>
+                    ¿Los gatos son reptiles?: false <br>
+                -->
+                
+                <h2> ¿Qué son los condicionales y para qué sirven?</h2>
+                <p>
+                    Los condicionales son instrucciones que permiten que el programa tome decisiones. Sirven 
+                    para ejecutar una parte del codigo solo si se cumple una condicion.
+                     <ul>
+                        <li><strong>Ejemplos cotidianos:</strong></li>
+                        <li>Si el semaforo esta en verde, entonces cruzo la calle</li>
+                        <li>Si hay dinero en mi cuenta, entonces puedo comprar cosas</li>
+                        <li>Si termine mi tarea, entonces juego videojuegos; si no, sigo estudiando</li>
+                    </ul>   
+                </p>
 
-    <h2>Ejemplos cotidianos</h2>
+                <h2>Sentencia if</h2>
+                <p> La sentencia if es una estructura que ejecuta un bloque de codigo solo si la condicion dentro
+                    del parentensis es verdadera (true). La sentencia if, sirve para ejecutar un bloque de codigo
+                    solo si se cumple una condicion especifica, si no se cumple, el programa simplemente ignora 
+                    ese bloque.
+                </p>
 
-    <ul>
-        <li>Si el semaforo esta en verde, entonces cruzo la calle</li>
-        <li>Si hay dinero en mi cuenta, entonces puedo comprar cosas</li>
-        <li>Si termine mi tarea, entonces juego videojuegos; si no, sigo estudiando</li>
-    </ul>
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
 
-    <h2>Sentencia if</h2>
-    <p> La sentencia if es una estructura que ejecuta un bloque de codigo solo si la condicion dentro del parentensis es verdadera (true)</p>
+    <span class="special-word">if</span> <span class="parentesis">(</span>condición<span class="parentesis">)</span> <span class="parentesis">{</span>
+        <span class="comment">// Código a ejecutar si la condición es verdadera</span>
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
+                
+                <h2>Sentencia else</h2>
+                <p> La sentencia else es una palabra clave que se usa para darle a enteneder a la maquina que en caso de que no se halla cumplido la sentencia if, entonces se ejecute lo que haya dentro de la sentencia else. En otras palabras se ejecuta si la ocndicion if es falsa</p>
+                <p> Para definir que hacer cuando no se cumpla la condicion inicial</p>
 
-    <h3> ¿Para que sirve?</h3>
-    <p> La sentencia if, sirve para ejecutar un bloque de codigo solo si se cumple una condicion especifica, si no se cumple, el programa simplemente ignora ese bloque</p>
+                <img src="img/else_statement.png" alt="else_statement">
 
-    <img src="img/if_statement.png" alt="if_statement">
+                <h2>¿Cómo se hace una condicion if-else?</h2>
+                <p> Se combinan if y else para tener un camino claro: si algo sucede, haces una cosa; si nom haces la otra.</p>
 
-    <h2>Sentencia else</h2>
-    <p> La sentencia else es una palabra clave que se usa para darle a enteneder a la maquina que en caso de que no se halla cumplido la sentencia if, entonces se ejecute lo que haya dentro de la sentencia else. En otras palabras se ejecuta si la ocndicion if es falsa</p>
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">int</span> edad = 16;
 
-    <h3> ¿Para que sirve?</h3>
-    <p> Para definir que hacer cuando no se cumpla la condicion inicial</p>
+    <span class="special-word">if</span> <span class="parentesis">(</span>edad >= 18<span class="parentesis">)</span> <span class="parentesis">{</span>
+        System.out.println<span class="parentesis">(</span><span class="comment">"Puedes votar."</span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span> <span class="special-word">else</span> <span class="parentesis">{</span>
+        System.out.println <span class="parentesis">(</span><span class="comment">"Aún no puedes votar." </span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
 
-    <img src="img/else_statement.png" alt="else_statement">
+                <h2>Condicionales anidados</h2>
+                <p> Un condicional anidado es un caso en el cual un if se encuentra dentro de otro if, esto permite evaluar varios condicionales paso a paso, como se muestra en la siguiente imagen.</p>
 
-    <h2>¿Como se hace una condicion if-else?</h2>
-    <p> Se combinan if y else para tener un camino claro: si algo sucede, haces una cosa; si nom haces la otra.</p>
+                <img src="img/nested_if.png" alt="nested_if">
 
-    <h3>Ejemplo</h3>
-    <img src="img/how-to-if-else.png" alt="if-else-example">
+                <p> o tambien puedes usar else if para multiples condiciones</p>
 
-    <h2>Condicionales anidados</h2>
-    <p> Un condicional anidado es un caso en el cual un if se encuentra dentro de otro if, esto permite evaluar varios condicionales paso a paso, como se muestra en la siguiente imagen.</p>
+                <img src="img/nested_if_2.png" alt="else_if">
 
-    <img src="img/nested_if.png" alt="nested_if">
+                <h2>Sentencia switch</h2>
 
-    <p> o tambien puedes usar else if para multiples condiciones</p>
+                <p> La sentencia switch evalua una variable contra varios posibles valores y ejecuta el bloque correspondiente. Es útil cuando tienes muchas condiciones sobre una misma variable.</p>
 
-    <img src="img/nested_if_2.png" alt="else_if">
+                <img src="img/switch_statement.png"  alt="switch_statement">
 
-    <h2>Sentencia switch</h2>
+                <h2>Ejemplo</h2>
 
-    <p> La sentencia switch evalua una variable contra varios posibles valores y ejecuta el bloque correspondiente. Es útil cuando tienes muchas condiciones sobre una misma variable.</p>
+                <img src="img/switch_example.png" alt="switch_example">
 
-    <h3>sintaxis</h3>
+                <h2>Conclusion</h2>
 
-    <img src="img/switch_statement.png"  alt="switch_statement">
+                <p>Los condicionales son el alma de las decisiones en un programa. Gracias a ellos puedes hacer que tu aplicacion se adapte a diferentes situaciones, igual que tu lo haces en la vida real. Ahora que conoces if, else, else if y switch, ¡tienes las herramientas basicas para controlar el flujo de tu codigo!</p>
+            </div>
+        </section>
+        <section class="exercises" style="border: 1px solid white;">
+            <div class="section-header" style="border: 1px solid white;">
+                <h2>Ejercicios: Ciclos</h2>
+                <p>En esta sección encontrarás ejercicios prácticos para que domines los ciclos en Java.</p>
+            </div>
+            <div class="section-body" style="border: 1px solid white;">
+                <!-- Ejercicio 1 -->
+                <div class="exercise" style="border: 1px solid white;">
+                    <h3>Ejercicio 1</h3>
+                    <p>Descripción del ejercicio 1...</p>
+                    <button>Intentar</button>
+                </div>
 
-    <h3>Ejemplo</h3>
+                <!-- Ejercicio 2 -->
+                <div class="exercise">
+                    <h3>Ejercicio 2</h3>
+                    <p>Descripción del ejercicio 2...</p>
+                    <button>Intentar</button>
+                </div>
 
-    <img src="img/switch_example.png" alt="switch_example">
+                <!-- Ejercicio 3 -->
+                <div class="exercise">
+                    <h3>Ejercicio 3</h3>
+                    <p>Descripción del ejercicio 3...</p>
+                    <button>Intentar</button>
+                </div>
 
-    <h2>Conclusion</h2>
+                <!-- Ejercicio 4 -->
+                <div class="exercise">
+                    <h3>Ejercicio 4</h3>
+                    <p>Descripción del ejercicio 4...</p>
+                    <button>Intentar</button>
+                </div>
 
-    <p>Los condicionales son el alma de las decisiones en un programa. Gracias a ellos puedes hacer que tu aplicacion se adapte a diferentes situaciones, igual que tu lo haces en la vida real. Ahora que conoces if, else, else if y switch, ¡tienes las herramientas basicas para controlar el flujo de tu codigo!</p>
+                <!-- Ejercicio 5 -->
+                <div class="exercise">
+                    <h3>Ejercicio 5</h3>
+                    <p>Descripción del ejercicio 5...</p>
+                    <button>Intentar</button>
+                </div>
+
+                <!-- Ejercicio 6 -->
+                <div class="exercise">
+                    <h3>Ejercicio 6</h3>
+                    <p>Descripción del ejercicio 6...</p>
+                    <button>Intentar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/index_script.js"></script>       
 
 </body>
 </html>
