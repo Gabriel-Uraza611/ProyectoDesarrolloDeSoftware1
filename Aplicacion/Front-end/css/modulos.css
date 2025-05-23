@@ -92,6 +92,27 @@ html {
 .yellow { background-color: #ffbd2e; }
 .green { background-color: #27c93f; }
 
+.copy-button-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.copy-button {
+    background-color: #3a3a3a;
+    color: #dcdcdc;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: #555;
+}
+
 pre {
     font-family: 'Courier New', Courier, monospace;
     color: #d4d4d4;
@@ -119,6 +140,14 @@ pre {
     color: #6a9955;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 35px auto;
+    border-radius: 5px;
 }
 
 /*

@@ -39,19 +39,7 @@
                         <li>¿Los gatos son reptiles?: false</li>
                     </ul>  
                 </p>
-                <!--<ul>
-                    <li>¿El cielo es azul?: true</li>
-                    <li>¿La tierra es plana?: false</li>
-                    <li>¿El agua es liquida?: true</li>
-                    <li>¿Los gatos son reptiles?: false</li>
-                </ul>
-                
-                ¿El cielo es azul?: true <br>
-                    ¿La tierra es plana?: false <br>
-                    ¿El agua es liquida?: true <br>
-                    ¿Los gatos son reptiles?: false <br>
-                -->
-                
+
                 <h2> ¿Qué son los condicionales y para qué sirven?</h2>
                 <p>
                     Los condicionales son instrucciones que permiten que el programa tome decisiones. Sirven 
@@ -78,7 +66,6 @@
                         <span class="dot green"></span>
                     </div>
                     <pre><code class="java">
-
     <span class="special-word">if</span> <span class="parentesis">(</span>condición<span class="parentesis">)</span> <span class="parentesis">{</span>
         <span class="comment">// Código a ejecutar si la condición es verdadera</span>
     <span class="parentesis">}</span>
@@ -89,7 +76,20 @@
                 <p> La sentencia else es una palabra clave que se usa para darle a enteneder a la maquina que en caso de que no se halla cumplido la sentencia if, entonces se ejecute lo que haya dentro de la sentencia else. En otras palabras se ejecuta si la ocndicion if es falsa</p>
                 <p> Para definir que hacer cuando no se cumpla la condicion inicial</p>
 
-                <img src="img/else_statement.png" alt="else_statement">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">if</span> <span class="parentesis">(</span>llueve<span class="parentesis">)</span> <span class="parentesis">{</span>
+        System.out.println<span class="parentesis">(</span><span class="comment">"Llevo paraguas"</span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span> <span class="special-word">else</span> <span class="parentesis">{</span>
+        System.out.println <span class="parentesis">(</span><span class="comment">"Salgo sin paraguas"</span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
 
                 <h2>¿Cómo se hace una condicion if-else?</h2>
                 <p> Se combinan if y else para tener un camino claro: si algo sucede, haces una cosa; si nom haces la otra.</p>
@@ -114,23 +114,108 @@
                 <h2>Condicionales anidados</h2>
                 <p> Un condicional anidado es un caso en el cual un if se encuentra dentro de otro if, esto permite evaluar varios condicionales paso a paso, como se muestra en la siguiente imagen.</p>
 
-                <img src="img/nested_if.png" alt="nested_if">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">int</span> temperatura = 35;
+
+    <span class="special-word">if</span> <span class="parentesis">(</span>temperatura > 30<span class="parentesis">)</span> <span class="parentesis">{</span>
+        <span class="special-word">if</span> <span class="parentesis">(</span>temperatura > 40<span class="parentesis">)</span> <span class="parentesis">{</span>
+            System.out.println<span class="parentesis">(</span><span class="comment">"Hace muchisimo calor"</span><span class="parentesis">)</span>;
+        <span class="parentesis">}</span> <span class="special-word">else</span> <span class="parentesis">{</span>
+            System.out.println <span class="parentesis">(</span><span class="comment">"Hace calor" </span><span class="parentesis">)</span>;
+        <span class="parentesis">}</span>
+    <span class="parentesis">}</span> <span class="special-word">else</span> <span class="parentesis">{</span>
+        System.out.println <span class="parentesis">(</span><span class="comment">"La temperatura está bien" </span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
 
                 <p> o tambien puedes usar else if para multiples condiciones</p>
 
-                <img src="img/nested_if_2.png" alt="else_if">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">int</span> nota = 85;
+
+    <span class="special-word">if</span> <span class="parentesis">(</span>nota >= 90<span class="parentesis">)</span> <span class="parentesis">{</span>
+        System.out.println<span class="parentesis">(</span><span class="comment">"Excelente!"</span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span> <span class="special-word">else if</span> <span class="parentesis">(</span>nota >= 70<span class="parentesis">)</span> <span class="parentesis">{</span>
+        System.out.println<span class="parentesis">(</span><span class="comment">"Aprobado!"</span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span> <span class="special-word">else</span> <span class="parentesis">{</span>
+        System.out.println<span class="parentesis">(</span><span class="comment">"Reprobado :("</span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
 
                 <h2>Sentencia switch</h2>
 
                 <p> La sentencia switch evalua una variable contra varios posibles valores y ejecuta el bloque correspondiente. Es útil cuando tienes muchas condiciones sobre una misma variable.</p>
 
-                <img src="img/switch_statement.png"  alt="switch_statement">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">switch</span> <span class="parentesis">(</span>variable<span class="parentesis">)</span> <span class="parentesis">{</span>
+        <span class="special-word">case</span> valor1:
+            <span class="comment">// código</span>
+            <span class="special-word">break</span>;
+        <span class="special-word">case</span> valor2:
+            <span class="comment">// código</span>
+            <span class="special-word">break</span>;
+        <span class="special-word">default</span>:
+            <span class="comment">// código si no hay coincidencia</span>
+            <span class="special-word">break</span>;
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
 
                 <h2>Ejemplo</h2>
 
-                <img src="img/switch_example.png" alt="switch_example">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">int</span> dia = 4;
 
-                <h2>Conclusion</h2>
+    <span class="special-word">switch</span> <span class="parentesis">(</span>dia<span class="parentesis">)</span> <span class="parentesis">{</span>
+        <span class="special-word">case</span> 1:
+            System.out.println<span class="parentesis">(</span><span class="comment">"Lunes"</span><span class="parentesis">)</span>;
+            <span class="special-word">break</span>;
+        <span class="special-word">case</span> 2:
+            System.out.println<span class="parentesis">(</span><span class="comment">"Martes"</span><span class="parentesis">)</span>;
+            <span class="special-word">break</span>;
+        <span class="special-word">case</span> 3:
+            System.out.println<span class="parentesis">(</span><span class="comment">"Miércoles"</span><span class="parentesis">)</span>;
+            <span class="special-word">break</span>;
+        <span class="special-word">case</span> 4:
+            System.out.println<span class="parentesis">(</span><span class="comment">"Jueves"</span><span class="parentesis">)</span>;
+            <span class="special-word">break</span>;
+        <span class="special-word">case</span> 5:
+            System.out.println<span class="parentesis">(</span><span class="comment">"Viernes"</span><span class="parentesis">)</span>;
+            <span class="special-word">break</span>;
+        <span class="special-word">default</span>:
+            System.out.println<span class="parentesis">(</span><span class="comment">"Otro día"</span><span class="parentesis">)</span>;
+            <span class="special-word">break</span>;
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
+
+                <h2>Conclusiones</h2>
 
                 <p>Los condicionales son el alma de las decisiones en un programa. Gracias a ellos puedes hacer que tu aplicacion se adapte a diferentes situaciones, igual que tu lo haces en la vida real. Ahora que conoces if, else, else if y switch, ¡tienes las herramientas basicas para controlar el flujo de tu codigo!</p>
             </div>

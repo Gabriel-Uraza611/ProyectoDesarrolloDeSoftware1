@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/modulos.css">
     <title>Java Facilito - Arreglos y Matrices</title>
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
 
-    <div class="module-content" style="overflow-y: auto;">
+    <div class="module-content">
         <section class="documentation">
-            <div class="section-header" style="background: linear-gradient(to right, #00c6ff, #0072ff); padding: 1rem; color: white;">
-                <h2>Arreglos y Matrices</h2>
+            <div class="section-header">
+                <h1>Arreglos y Matrices</h1>
             </div>
-            <div class="section-body" style="padding: 1rem;">
+            <div class="section-body">
                 <p>
                     En Java, los <strong>arreglos (Arrays)</strong> son estructuras de datos que almacenan múltiples valores del mismo tipo en una sola variable. 
                     Cada elemento en un arreglo tiene una posición o <em>índice</em>, que comienza en 0.
                 </p>
 
-                <h3>Declaración y uso de arreglos</h3>
+                <h2>Declaración y uso de arreglos</h2>
                 <p>
                     Para declarar un arreglo se especifica el tipo de elementos que este va a almacenar: int, string, etc.
                     Tambien se debe especificar la cantidad maxima que debe almacenar.
@@ -35,53 +29,84 @@
                     segun el tipo de arreglo que manejamos, para ello utlizamos las llaves [] y dentro el valor del indice o posición
                     del arreglo al que queremos asignarle un valor.
                 </p>
-                <pre><code>
-                    int[] numeros = new int[5];
-                    numeros[0] = 10;
-                    numeros[1] = 20;
-                </code></pre>
+
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">int</span><span class="parentesis">[</span><span class="parentesis">]</span> numeros = <span class="special-word">new</span> int<span class="parentesis">[</span>5<span class="parentesis">]</span>;
+    <span class="special-word">numeros</span><span class="parentesis">[</span>0<span class="parentesis">]</span> = 10; 
+    <span class="special-word">numeros</span><span class="parentesis">[</span>1<span class="parentesis">]</span> = 20; 
+                    </code></pre>
+                </div>
+
                 <p>También se pueden declarar e inicializar al mismo tiempo, con llaves y los valores separados por comas:</p>
-                <pre><code>
-                    String[] nombres = {"Ana", "Luis", "Carlos"};
-                </code></pre>
-
-
+                
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">String</span><span class="parentesis">[</span><span class="parentesis">]</span> nombres = <span class="parentesis">{</span><span class="comment">"Ana"</span>,<span class="comment">"Luis"</span>,<span class="comment">"Carlos"</span><span class="parentesis">}</span>
+                    </code></pre>
+                </div>
+            
                 <p>
                     Existe algunos metodos que se pueden aplicar directamente sobre el arreglo.
                     Para implementarlos remplazar la palabra array, array1, array2 por los nombres de los arreglos que manejes
                 </p>
                 <ul>
-                    <li><code><span style="color: #a200ff">array</span>.length</code>: Propiedad que devuelve la longitud (número de elementos) del arreglo.</li>
-                    <li><code>Arrays.sort(<span style="color: #a200ff">array</span>)</code>: Ordena los elementos del arreglo de menor a mayor.</li>
-                    <li><code>Arrays.toString(<span style="color: #a200ff">array</span>)</code>: Devuelve una representación en forma de cadena del arreglo.</li>
-                    <li><code>Arrays.copyOf(<span style="color: #a200ff">array</span>, #Nuevo tamaño)</code>: Crea una copia del arreglo con una nueva longitud.</li>
-                    <li><code>Arrays.equals(<span style="color: #a200ff">array1</span>, <span style="color: #a200ff">array2</span>)</code>: Compara si dos arreglos son iguales elemento por elemento.</li>
-                    <li><code>Arrays.fill(<span style="color: #a200ff">array</span>, #valor)</code>: Asigna un valor a todos los elementos del arreglo.</li>
+                    <li>array.length: Propiedad que devuelve la longitud (número de elementos) del arreglo.</li>
+                    <li>Arrays.sort(<span class="special-word">array</span>): Ordena los elementos del arreglo de menor a mayor.</li>
+                    <li><code>Arrays.toString(<span class="special-word">array</span>): Devuelve una representación en forma de cadena del arreglo.</li>
+                    <li><code>Arrays.copyOf(<span class="special-word">array</span>, #Nuevo tamaño): Crea una copia del arreglo con una nueva longitud.</li>
+                    <li><code>Arrays.equals(<span class="special-word">array1</span>, <span class="special-word">array2</span>): Compara si dos arreglos son iguales elemento por elemento.</li>
+                    <li><code>Arrays.fill(<span class="special-word">array</span>, #valor)</code>: Asigna un valor a todos los elementos del arreglo.</li>
                 </ul>
 
-                <h3>Recorrido de un arreglo</h3>
+                <h2>Recorrido de un arreglo</h2>
                 <p>
                     Para recorrer un arreglo debemos llamar cada valor del mismo con las llaves y el indice.
                     La forma más comoda de recorrer el arreglo es con un bucle for:
                 </p>
-                <pre><code>
-                    int[] numeros = new int[5];
-                    for (int i = 0; i < numeros.length; i++) {
-                        System.out.println(numeros[i]);
-                    }
-                </code></pre>
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">int</span><span class="parentesis">[</span><span class="parentesis">]</span> numeros = <span class="special-word">new</span> int<span class="parentesis">[</span>5<span class="parentesis">]</span>;
+    <span class="special-word">for</span> <span class="parentesis">(</span>int i = 0; i < numeros.length; i++<span class="parentesis">)</span> <span class="parentesis">{</span>
+        System.out.println<span class="parentesis">(</span><span class="special-word">numeros</span><span class="parentesis">[</span>i<span class="parentesis">]</span><span class="parentesis">)</span>;
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
 
-                <h3>Arreglos multidimensionales (Matrices)</h3>
+                <h2>Arreglos multidimensionales (Matrices)</h2>
                 <p>
                     Las <strong>matrices</strong> son arreglos de dos o más dimensiones. En Java, una matriz de dos dimensiones puede verse como una tabla.
                     Para definir las matrices, es igual a la Sintaxis de los arreglos pero con 2 o mas campos de valores.
                 </p>
-                <pre><code>
-                    int[][] matriz = new int[2][3];
-                    matriz[0][0] = 1;
-                    matriz[0][1] = 2;
-                    matriz[1][0] = 3;
-                </code></pre>
+
+                 <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">int</span><span class="parentesis">[</span><span class="parentesis">]</span><span class="parentesis">[</span><span class="parentesis">]</span> matriz = <span class="special-word">new</span> int<span class="parentesis">[</span>2<span class="parentesis">]</span><span class="parentesis">[</span>3<span class="parentesis">]</span>;
+    <span class="special-word">numeros</span><span class="parentesis">[</span>0<span class="parentesis">]</span><span class="parentesis">[</span>0<span class="parentesis">]</span> = 1; 
+    <span class="special-word">numeros</span><span class="parentesis">[</span>0<span class="parentesis">]</span><span class="parentesis">[</span>1<span class="parentesis">]</span> = 2;
+    <span class="special-word">numeros</span><span class="parentesis">[</span>1<span class="parentesis">]</span><span class="parentesis">[</span>0<span class="parentesis">]</span> = 3; 
+                    </code></pre>
+                </div>
 
                 <p>
                     Las matrices se caracterizan por tener 2 dimensiones (i, j), se pueden comparar a una tabla con filas y columnas.
@@ -89,25 +114,48 @@
                 </p>
 
                 <p>Recorrer una matriz:</p>
-                <pre><code>
+
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">for</span> <span class="parentesis">(</span>int i = 0; i < matriz.length; i++<span class="parentesis">)</span> <span class="parentesis">{</span>
+        <span class="special-word">for</span> <span class="parentesis">(</span>int j = 0; j < <span class="special-word">matriz</span><span class="parentesis">[</span>i<span class="parentesis">]</span>.length; j++<span class="parentesis">)</span> <span class="parentesis">{</span>
+            System.out.println<span class="parentesis">(</span><span class="comment">"Elemento en ["</span>+ i +<span class="comment">"]["</span>+ j +<span class="comment">"]: "</span>+ <span class="special-word">matriz</span><span class="parentesis">[</span>i<span class="parentesis">]</span><span class="parentesis">[</span>j<span class="parentesis">]</span>;
+        <span class="parentesis">}</span>
+    <span class="parentesis">}</span>
+                    </code></pre>
+                </div>
+                <!--<pre><code>
                     for (int i = 0; i < matriz.length; i++) {
                         for (int j = 0; j < matriz[i].length; j++) {
                             System.out.println("Elemento en [" + i + "][" + j + "]: " + matriz[i][j]);
                         }
                     }
-                </code></pre>
-
+                </code></pre>-->
+    
                 <p>
                     Un ejemplo para el uso de matrices es cuando queremos guardar varios datos de un mismo objeto, en este caso personas.
                     Definir una matriz donde las filas sea una persona distinta y las columnas sea la información personal de esa persona.
                 </p>
-                <pre><code>
-                    String[][] personas = {
-                        {"Juan", "25", "Bogotá"},
-                        {"Ana", "30", "Medellín"},
-                        {"Luis", "22", "Cali"}
-                    };
-                </code></pre>
+
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="java">
+    <span class="special-word">String</span><span class="parentesis">[</span><span class="parentesis">]</span><span class="parentesis">[</span><span class="parentesis">]</span> personas = <span class="parentesis">{</span>
+        <span class="parentesis">{</span><span class="comment">"Chinatsu"</span>,<span class="comment">"18"</span>,<span class="comment">"Tokyo"</span><span class="parentesis">}</span>,
+        <span class="parentesis">{</span><span class="comment">"Hina"</span>,<span class="comment">"17"</span>,<span class="comment">"Kyoto"</span><span class="parentesis">}</span>,
+        <span class="parentesis">{</span><span class="comment">"Daniel"</span>,<span class="comment">"19"</span>,<span class="comment">"Tuluá :("</span><span class="parentesis">}</span>
+    <span class="parentesis">}</span>;
+                    </code></pre>
+                </div>
 
             </div>
         </section>
