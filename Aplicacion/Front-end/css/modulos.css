@@ -142,7 +142,7 @@ pre {
     font-weight: 600;
 }
 
-img {
+.img-section-body {
     max-width: 100%;
     height: auto;
     display: block;
@@ -180,7 +180,91 @@ img {
     cursor: pointer;
 }
 
+.comment-section {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 0 10px;
+    color: white;
+}
 
+.comment-section-body h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 0.7rem;
+}
+
+#comment-area {
+  background-color: #111;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+  resize: none;
+}
+
+.publish-btn{
+    background: linear-gradient(to right, #8c52ff, #14e4eb);
+    color: white;
+    padding: 5px 17px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.comment-input {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.profile-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.profile-side img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-side .username {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.comment-bubble {
+  background-color: #111;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1;
+  color: white;
+}
+
+.comment-separator {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+}
+
+
+/* Estilo para el contenedor de comentarios */
 
 /*
 /* Encabezados con menos espacio 

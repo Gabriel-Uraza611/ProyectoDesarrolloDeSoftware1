@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(html => {
                 // Se utiliza el método innerHTML para insertar el contenido en el div
                 contentDiv.innerHTML = html;
+                
+                
+                
                  // Activar el enlace correspondiente
                  // Se utiliza el método forEach para recorrer todos los enlaces del menú
                 menuLinks.forEach(link => {
@@ -103,3 +106,5 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add("light-mode");
     }
 });
+
+
