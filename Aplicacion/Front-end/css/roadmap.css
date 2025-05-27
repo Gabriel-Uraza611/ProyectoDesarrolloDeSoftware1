@@ -79,9 +79,39 @@ html {
     font-weight: 300;
 }
 
-/*@media only screen and (min-width: 768px) {
-    Esto en caso de que queramos que la timeline sea responsiva cuando la pantalla sea mayor a 768px
-}*/
+.java-projects-section {
+    margin-top: 20px;
+    border-radius: 15px;
+    min-height: 100vh;
+    width: 100%;
+    padding: 60px;
+    background-color: #101010;
+}
+
+.java-projects-section h1 {
+    color: #14e4eb;
+    font-weight: 600;
+}
+
+.java-projects-section h2 {
+    margin-top: 20px;
+    font-size: 1.6em;
+    color: white;
+}
+
+.java-projects-section p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.img-java-projects {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 35px auto;
+    border-radius: 5px;
+}
+
 @media only screen and (min-width: 768px) {
     .timeline::before{
         content: '';

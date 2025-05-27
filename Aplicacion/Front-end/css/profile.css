@@ -18,7 +18,7 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #202020;
+    background-color: #101010;
     border-radius: 10px;
 }
 
@@ -28,7 +28,7 @@ body {
     align-items: center;
     padding: 0 20px;
     margin: 0 20px;
-    background-color: #202020;
+    background-color: #101010;
     border-radius: 10px;
 }
 
@@ -75,14 +75,14 @@ body {
 .motivational-message {
     margin: 20px 0;
     padding: 20px;
-    background-color: #202020;
+    background-color: #101010;
     border-radius: 10px;
     text-align: center;
 }
 
 .support-contact {
     padding: 20px;
-    background-color: #202020;
+    background-color: #101010;
     border-radius: 10px;
 }
 
