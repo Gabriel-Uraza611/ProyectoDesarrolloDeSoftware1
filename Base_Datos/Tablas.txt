@@ -8,17 +8,11 @@ CREATE TABLE Usuario (
     foto_perfil TEXT
 );
 
-CREATE TABLE Ejercicio (
-    id_ejercicio SERIAL PRIMARY KEY,
-    descripcion TEXT NOT NULL,
-    codigo_base TEXT,
-    solucion_correcta TEXT
-);
 
-CREATE TABLE Progreso_usuario (
-    id_progreso SERIAL PRIMARY KEY,
-    id_usuario INTEGER NOT NULL REFERENCES Usuario(id_usuario),
-    completado BOOLEAN DEFAULT FALSE
+CREATE TABLE Modulo (
+    id_modulo SERIAL PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL
+    num_ejercicios INTEGER NOT NULL
 );
 
 CREATE TABLE Comentario (
